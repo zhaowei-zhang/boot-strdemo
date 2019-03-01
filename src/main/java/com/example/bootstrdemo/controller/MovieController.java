@@ -25,6 +25,7 @@ public class MovieController {
 
     @PostMapping("/user2")
     public @ResponseBody  User findById2(@RequestParam Long id){
+        System.out.println("user2");
         return this.restTemplate.getForObject("http://localhost:8666/"+id,User.class);
     }
 }
